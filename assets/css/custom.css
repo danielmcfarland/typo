@@ -1,1 +1,35 @@
 /* Place custom css here */
+:root {
+    --footer-height: 5rem;
+}
+
+footer {
+    flex-wrap: wrap;
+}
+
+footer a {
+    font-family: "Literata";
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a span:not(.emoji) {
+    text-decoration: underline;
+}
+
+footer p {
+    text-align: center;
+    min-width: 100%;
+    margin-top: var(--p-margin-top) / 2;
+    margin-bottom: var(--p-margin-top) / 2;
+}
+
+footer p:first-child {
+    margin-top: var(--p-margin-top);
+}
+
+footer p:last-child {
+    margin-bottom: var(--p-margin-top);
+}

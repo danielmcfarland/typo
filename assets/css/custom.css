@@ -3,6 +3,10 @@
     --footer-height: 5rem;
 }
 
+.header .header-title a {
+    text-decoration: none;
+}
+
 footer {
     flex-wrap: wrap;
 }

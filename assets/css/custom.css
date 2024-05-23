@@ -1,6 +1,7 @@
 /* Place custom css here */
 :root {
     --footer-height: 5rem;
+    --content-height: unset;
 }
 
 .header .header-title a {

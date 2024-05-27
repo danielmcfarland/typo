@@ -4,7 +4,7 @@
 
 {{ partial "breadcrumbs.html" . }}
 
-<div {{ if .Param "autonumber" }} class="autonumber" {{ end }}>
+<div {{ if .Param "autonumber" }} class="h-entry autonumber" {{ else }} class="h-entry" {{ end }}>
 
   <div class="single-intro-container">
 
@@ -62,7 +62,7 @@
 
   {{/* Actual document content */}}
 
-  <div class="single-content">
+  <div class="single-content" >
     {{ .Content }}
     {{ partial "comments.html" . }}
   </div>

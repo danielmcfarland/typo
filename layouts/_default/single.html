@@ -10,9 +10,9 @@
 
     {{/* Title and Summary */}}
 
-    <h1 class="single-title">{{ .Title }}</h1>
+    <h1 class="single-title p-name">{{ .Title }}</h1>
     {{ with .Param "summary" }}
-    <p class="single-summary">{{ . }}</p>
+    <p class="single-summary p-summary">{{ . }}</p>
     {{ end }}
 
     {{/* Reading Time */}}
@@ -21,7 +21,7 @@
       {{ with .Date }}
       {{ $dateMachine := . | time.Format "2006-01-02T15:04:05-07:00" }}
       {{ $dateHuman := . | time.Format ":date_long" }}
-      <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+      <time class="dt-published" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
       {{end}}
 
       {{ if .Param "readTime" }}
@@ -62,7 +62,7 @@
 
   {{/* Actual document content */}}
 
-  <div class="single-content" >
+  <div class="single-content e-content">
     {{ .Content }}
     {{ partial "comments.html" . }}
   </div>

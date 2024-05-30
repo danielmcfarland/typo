@@ -10,7 +10,7 @@
     <div>
         <p class="line-title">
             {{ if eq .Type "bookmarks" }}
-                <a href="{{ index (index .Params.Properties "bookmark-of") 0 }}">
+                <a href="{{ index (index .Params.Properties "bookmark-of") 0 }}" target="_blank">
                     {{ index (index .Params.Properties "bookmark-of") 0 }}
                 </a>
             {{ else }}

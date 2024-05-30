@@ -9,9 +9,15 @@
 
     <div>
         <p class="line-title">
-            <a href="{{ .RelPermalink }}">
-                {{ .Title }}
-            </a>
+            {{ if eq .Type "bookmarks" }}
+                <a href="{{ index (index .Params.Properties "bookmark-of") 0 }}">
+                    {{ index (index .Params.Properties "bookmark-of") 0 }}
+                </a>
+            {{ else }}
+                <a href="{{ .RelPermalink }}">
+                    {{ .Title }}
+                </a>
+            {{ end }}
         </p>
 
         {{ if .Site.Params.listSummaries }}

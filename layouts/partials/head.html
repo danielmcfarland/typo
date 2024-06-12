@@ -8,6 +8,16 @@
 <link href="https://indieauth.com/auth" rel="authorization_endpoint">
 <link href="https://tokens.indieauth.com/token" rel="token_endpoint">
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZE9XS6RRE"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZZE9XS6RRE');
+</script>
+
 <title>
     {{ if .IsHome }}
     {{ site.Title }}
